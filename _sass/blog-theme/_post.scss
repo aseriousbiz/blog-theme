@@ -7,6 +7,12 @@ article.post {
   h1.post-title {
     font-size: 3em;
   }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .posts-list h1.post-title {
@@ -16,11 +22,11 @@ article.post {
 .meta {
   font-size: 1rem;
   font-weight: 200;
-  color: #a0a0a0;
+  color: $muted-text-color;
   margin-left: 4px;
 
   a {
-    color: #a0a0a0;
+    color: $muted-text-color;
   }
 
   .date, .tags, .comments, edit {
@@ -51,4 +57,11 @@ img.excerpt {
       max-width: 100%;
     }
   }
+}
+
+span.caption {
+  color: $caption-color;
+  font-size: .8em;
+  text-align: center;
+  display: block;
 }
