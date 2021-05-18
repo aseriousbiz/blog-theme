@@ -29,6 +29,10 @@ footer nav ul li {
     white-space: nowrap;
     font-size: 0.75rem;
     vertical-align: middle;
+
+    svg {
+      font-size: 1.5em !important;
+    }
 }
 
 footer nav ul li a, footer nav ul li span {
