@@ -1,0 +1,53 @@
+h1.post-title {
+  font-size: 2em;
+}
+
+article.post {
+  h1.post-title {
+    font-size: 3em;
+  }
+}
+
+.posts-list h1.post-title {
+  margin-top: 72px;
+}
+
+.meta {
+  font-size: 1rem;
+  font-weight: 200;
+  color: #a0a0a0;
+  margin-left: 4px;
+
+  a {
+    color: #a0a0a0;
+  }
+
+  .date, .tags, .comments, edit {
+    padding-right: 10px;
+  }
+}
+
+img.excerpt {
+  margin-top: 8px;
+}
+
+.author {
+  text-align: center;
+  margin-bottom: 32px;
+  width: 100%;
+
+  .avatar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+
+    img {
+      border-radius: 50%;
+      display: block;
+      float: none;
+      width: 160px;
+      max-width: 100%;
+    }
+  }
+}

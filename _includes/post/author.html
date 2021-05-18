@@ -1,0 +1,9 @@
+{% assign author = page.author | default: post.author %}
+{% if author %}
+<div class="author">
+  <div class="avatar">
+    <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" />
+  </div>
+  <div>{{ author.name }}</div>
+{% endif %}
+</div>

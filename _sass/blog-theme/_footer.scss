@@ -1,0 +1,41 @@
+footer {
+  padding: 3rem 1.5rem 1.5rem;
+  margin-top: 30px;
+}
+
+footer nav {
+  text-align: center;
+  font-size: .75rem !important;
+  color: #7a7a7a;
+}
+
+footer nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+footer nav ul li {
+    margin: 0 1em;
+    height: 24px;
+    display: list-item;
+    line-height: 24px;
+    list-style-type: none;
+    display: list-item;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    vertical-align: middle;
+}
+
+footer nav ul li a, footer nav ul li span {
+  vertical-align: middle;
+}
+
+footer nav ul li img {
+  margin: 0 0.5em;
+  vertical-align: middle;
+}

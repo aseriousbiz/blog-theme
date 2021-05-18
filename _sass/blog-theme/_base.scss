@@ -1,0 +1,64 @@
+body {
+  width: 800px;
+  padding: 40px 0;
+  margin: 0 auto;
+  font-family: "Roboto","-apple-system","Segoe UI","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
+  background-color: #f4f6f6;
+  color: #424242;
+}
+
+.title {
+  font-size: 3em;
+}
+
+.subtitle {
+  color: #555858;
+  margin-top: -16px;
+  margin-bottom: px;
+}
+
+a {
+  color: #424242;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: #3273dc;
+  }
+}
+
+h1, h2 {
+  text-align: center;
+  clear: both;
+  margin-bottom: 1em;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+p, li, h1, h2 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2em;
+  }
+  h1 {
+    font-size: 1.25em;
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+  p, h2, li {
+    font-size: 1.125em;
+    line-height: 1.5;
+  }
+  p {
+    margin-bottom: 3em;
+  }
+}

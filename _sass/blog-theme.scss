@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+// AT MINIMUM, OVERRIDE THESE FIRST FOUR TO MAKE THE THEME YOUR OWN
+$header-background-color: #652a2b !default;
+$brand-color:      #d2691e !default;
+$post-font-family: 'Mate', Georgia, Cambria, "Times New Roman", Times, serif !default;
+$title-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$code-font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'lucida console' !default;
+$baseurl: '' !default;
+
+$base-font-size:   21px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * .875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #111 !default;
+$muted-text-color: #656c7a;
+$background-color: #fdfdfd !default;
+$highlight-color:  #fcf9eb;
+
+$caption-color:       #999;
+$caption-icon-color:  #333;
+
+$grey-color:       #828282 !default;
+$grey-color-medium:#aaa !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$inline-code-background-color: rgba(27,31,35,.05);
+
+$table-text-align: left !default;
+
+// Width of the sidebar
+$sidebar-width: 300px !default;
+
+// Width of the content area
+$on-mobile:        700px !default;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+@mixin relative-font-weight($ratio) {
+  font-weight: $base-font-weight * $ratio;
+}
+
+// Import partials.
+@import
+  'blog-theme/base',
+  'blog-theme/header',
+  'blog-theme/footer',
+  'blog-theme/post',
+  'blog-theme/contributors',
+  'blog-theme/archive',
+  'blog-theme/pagination',
+  'blog-theme/code';

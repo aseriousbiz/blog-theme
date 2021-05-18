@@ -1,0 +1,11 @@
+<div class="meta">
+  <span class="date">
+    <i class="far fa-calendar-alt"></i> 
+    <time class="dt-published" datetime="{{ page.date | default:post.date | date_to_xmlschema }}" itemprop="datePublished">
+      {% assign date_format = site.blog-theme.date_format | default: "%b %-d, %Y" %}
+      {{ page.date | default:post.date | date: date_format }}
+    </time>
+  </span>
+  <span class="tags"><i class="fas fa-tags"></i> {% include post/tags.html %}</span>
+  <span class="edit"><i class="fas fa-edit"></i> {% include post/edit.html %}</span>
+</div>

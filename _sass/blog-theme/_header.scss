@@ -1,0 +1,29 @@
+header.header {
+  margin-bottom: 100px;
+
+  .logo {
+    margin-bottom: 50px;
+    display: block;
+    float: right;
+    border: none;
+  
+    a {
+      text-decoration: none;
+    }
+
+    img.abbot-logo {
+      float: none;
+      display: block;
+      margin: 0 auto;
+      clear: both;
+      width: 100px;
+      border-radius: 50%;
+    }
+
+    .blog-title {
+      margin-top: 12px;
+      text-align: center;
+    }
+  }
+}
+
