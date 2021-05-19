@@ -1,14 +1,24 @@
 ---
 layout: default
 ---
-<article class="page">
+{% assign hero_class = page.hero_class | default: post.hero_class | default: "is-link" %}
+{% assign container-class = page.container_class | default: post.container_class | default: "page-content" %}
+<div class="page">
+  <section class="hero {{hero_class}} is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">{{ page.title | escape }}</h1>
+      </div>
+    </div>
+  </section>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
-
-  <div class="post-content">
-    {{ content }}
-  </div>
-
-</article>
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-two-fifths">
+        <div class="content {{container-class}}">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

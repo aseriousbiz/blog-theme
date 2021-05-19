@@ -1,35 +1,39 @@
-header.header {
-  margin-bottom: 100px;
+.navbar {
+  background-color: $navbar-background-color;
+
+  a.navbar-item {
+    color: $navbar-item-color;
+    font-size: 1rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    &:hover {
+      color: $navbar-active-color;
+      background-color: inherit !important;
+    }
+
+    &.is-active {
+      color: $navbar-active-color;
+      background-color: $navbar-active-background-color !important;
+    }
+  }
 
   .logo {
-    margin-bottom: 50px;
-    display: block;
-    float: right;
-    border: none;
-  
-    a {
-      text-decoration: none;
+    color: $caption-color !important;
+    font-family: 'Bungee Hairline',"-apple-system","Segoe UI","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    display: inline-block;
+    vertical-align: middle;
+
+    svg {
+      position: relative;
+      top: 1.75px;
     }
 
-    img.abbot-logo {
-      float: none;
-      display: block;
-      margin: 0 auto;
-      clear: both;
-      width: 100px;
-      border-radius: 50%;
-    }
-
-    .blog-title {
-      margin-top: 12px;
-      text-align: center;
+    .sub-logo {
+      font-size: 23px;
+      vertical-align: middle;
     }
   }
 }
-
-@include media-query($on-mobile) {
-  header.header .logo img.abbot-logo {
-    width: 50px;
-  }
-}
-

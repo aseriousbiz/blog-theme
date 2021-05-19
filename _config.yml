@@ -61,6 +61,9 @@ defaults:
       type: "posts"
     values:
       layout: post
+      author:
+        name: "unknown"
+        avatar: "/assets/img/unknown-avatar.png"
   -
     scope:
       path: "pages"

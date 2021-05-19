@@ -2,24 +2,22 @@
 title: Tags
 permalink: /tags/
 include_nav: false
+hero_class: is-primary
+container_class: tags
 ---
 
 <script>
   Haack.ready(() => {
-    let title = document.getElementsByClassName('post-title')
-    if (title) {
-      title[0].style.display = 'none'
-    }
-    let tag = window.location.hash
+    const tag = window.location.hash
     if(tag) {
-        let tagElement = document.getElementById(tag.substring(1))
+        let tagElement = document.getElementById(`tag-${tag.substring(1)}`)
         if (tagElement) {
           tagElement.style.display = 'block'
         }
     }
     else {
       // Let's just show them all
-      var tags = document.getElementsByClassName('tag')
+      const tags = document.querySelectorAll('.tags .tag-list')
       for (var tagElement of tags) {
         if (tagElement) {
           tagElement.style.display = 'block'
@@ -33,7 +31,7 @@ include_nav: false
 
 {% for tag in tags %}
   {% assign tagname = tag | first | slugify %}
-<div id="{{ tagname }}" class="tag">
+<div id="tag-{{ tagname }}" class="tag-list">
   <span class="meta">Tagged with</span>
   <h2>{{ tagname }}</h2>
   {% assign posts = tag[1] %}

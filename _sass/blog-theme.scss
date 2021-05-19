@@ -2,7 +2,11 @@
 
 // Define defaults for each variable.
 // AT MINIMUM, OVERRIDE THESE FIRST FOUR TO MAKE THE THEME YOUR OWN
-$header-background-color: #652a2b !default;
+$main-hero-background: radial-gradient(#6b046c, #10003d);
+$navbar-background-color: #242424 !default;
+$navbar-active-background-color: #000;
+$navbar-active-color: #fff;
+$navbar-item-color: #aaa;
 $background-color: #f4f6f6;
 $base-font-family: "Roboto","-apple-system","Segoe UI","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
 $code-font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'lucida console' !default;
@@ -16,7 +20,7 @@ $base-line-height: 1.5 !default;
 $spacing-unit:     30px !default;
 
 $text-color: #424242;
-$link-color: #3273dc;
+$link-color: #112277;
 $muted-text-color: #656c7a;
 $background-color: #fdfdfd !default;
 $highlight-color:  #fcf9eb;
@@ -30,6 +34,13 @@ $grey-color:       #828282 !default;
 $grey-color-medium:#aaa !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
+
+$navbar-item-color: #aaa;
+$navbar-item-hover-color: hsl(0, 100%, 100%);
+$navbar-item-hover-background-color: hsl(0,0,14%);
+$navbar-item-active-color: hsl(0,100,100);
+$navbar-item-active-background-color: hsl(0, 0, 0%);
+$navbar-background-color: hsl(0, 0, 14%);
 
 $inline-code-background-color: rgba(27,31,35,.05);
 
@@ -59,6 +70,5 @@ $on-mobile:        700px !default;
   'blog-theme/footer',
   'blog-theme/post',
   'blog-theme/contributors',
-  'blog-theme/archive',
   'blog-theme/pagination',
   'blog-theme/code';

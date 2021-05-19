@@ -1,6 +1,20 @@
-<span class="logo">
-    <a href="/">
-        <img class="abbot-logo" src="{{ '/assets/img/abbot-logo.png' | relative_url }}" alt="Image of Abbot, the friendly ChatOps Bot." />
-        <div class="blog-title">The Abbot Blog</div>
-    </a>
-</span>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item logo" href="/">
+                {% include logo.html %}
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div><!-- .navbar-brand -->
+        <div class="navbar-menu has-text-centered-touch" id="navMenu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="/archives/">Archives</a>
+                <a class="navbar-item" href="/contributors/">Contributors</a>
+            </div>
+        </div>
+    </div><!-- .container -->
+</nav>
