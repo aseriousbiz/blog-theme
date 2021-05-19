@@ -2,6 +2,7 @@
 layout: default
 ---
 {% assign hero_class = page.hero_class | default: post.hero_class | default: "is-link" %}
+{% assign container-class = page.container_class | default: post.container_class | default: "page-content" %}
 <div class="page">
   <section class="hero {{hero_class}} is-bold">
     <div class="hero-body">
@@ -11,11 +12,13 @@ layout: default
     </div>
   </section>
 
-  <div class="columns">
-    <div class="column is-three-fifths is-offset-one-fifth">
-      <div class="post-content content">
-        {{ content }}
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-two-fifths">
+        <div class="content {{container-class}}">
+          {{ content }}
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>

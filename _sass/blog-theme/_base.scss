@@ -72,8 +72,30 @@ ul.is-horizontal {
 }
 
 .tags {
-  .tag {
+  display: block;
+  flex: none;
+  flex-wrap: nowrap;
+
+  .tag-list {
     display: none;
+
+    .meta {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    h2 {
+      margin: 8px 0 4px 2px;
+      font-size: 1.2em;
+    }
+
+    ul {
+      margin-top: 20;
+      margin-bottom: 40px;
+      li {
+        font-size: 0.6em;
+      }
+    }
   }
 }
 
