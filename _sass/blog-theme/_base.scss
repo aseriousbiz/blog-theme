@@ -2,9 +2,9 @@ body {
   width: 800px;
   padding: 40px 0;
   margin: 0 auto;
-  font-family: "Roboto","-apple-system","Segoe UI","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
-  background-color: #f4f6f6;
-  color: #424242;
+  font-family: $base-font-family;
+  background-color: $background-color;
+  color: $text-color;
 }
 
 .title {
@@ -12,18 +12,18 @@ body {
 }
 
 .subtitle {
-  color: #555858;
+  color: $muted-text-color;
   margin-top: -16px;
   margin-bottom: px;
 }
 
 a {
-  color: #424242;
+  color: $link-color;
   cursor: pointer;
   text-decoration: none;
 
   &:hover {
-    color: #3273dc;
+    color: darken($link-color, 20%);
   }
 }
 
@@ -34,17 +34,32 @@ h1, h2 {
 }
 
 p, li, h1, h2 {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }
 
 blockquote {
   font-size: 23.625px;
-  border-left: 4px solid #e8e8e8;
-  color: #828282;
+  border-left: 4px solid $blockquote-border-color;
+  color: $grey-color;
   font-style: italic;
   letter-spacing: -1px;
   padding-left: 15px;
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 }
 
 // --------
@@ -80,22 +95,25 @@ table {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@include media-query($on-mobile) {
   body {
     box-sizing: border-box;
     width: 100%;
     padding: 2em;
+    font-size: 0.8em;
   }
-  h1 {
-    font-size: 1.25em;
-    line-height: 1.2;
-    margin-bottom: 0;
+
+  .title {
+    font-size: 2em;
+    margin-bottom: 8px;
   }
-  p, h2, li {
-    font-size: 1.125em;
-    line-height: 1.5;
+
+  .subtitle {
+    margin: 0;
   }
-  p {
-    margin-bottom: 3em;
+
+  p, li, h1, h2 {
+    font-size: $small-font-size;
+    line-height: $base-line-height;
   }
 }

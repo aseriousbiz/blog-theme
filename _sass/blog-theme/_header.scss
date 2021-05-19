@@ -27,3 +27,9 @@ header.header {
   }
 }
 
+@include media-query($on-mobile) {
+  header.header .logo img.abbot-logo {
+    width: 50px;
+  }
+}
+

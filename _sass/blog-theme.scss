@@ -3,27 +3,28 @@
 // Define defaults for each variable.
 // AT MINIMUM, OVERRIDE THESE FIRST FOUR TO MAKE THE THEME YOUR OWN
 $header-background-color: #652a2b !default;
-$brand-color:      #d2691e !default;
-$post-font-family: 'Mate', Georgia, Cambria, "Times New Roman", Times, serif !default;
-$title-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$base-font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$background-color: #f4f6f6;
+$base-font-family: "Roboto","-apple-system","Segoe UI","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
 $code-font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'lucida console' !default;
 $baseurl: '' !default;
 
-$base-font-size:   21px !default;
+$base-font-size:   20px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * .875 !default;
 $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #111 !default;
+$text-color: #424242;
+$link-color: #3273dc;
 $muted-text-color: #656c7a;
 $background-color: #fdfdfd !default;
 $highlight-color:  #fcf9eb;
 
 $caption-color:       #999;
 $caption-icon-color:  #333;
+
+$blockquote-border-color: #e8e8e8;
 
 $grey-color:       #828282 !default;
 $grey-color-medium:#aaa !default;
@@ -33,9 +34,6 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 $inline-code-background-color: rgba(27,31,35,.05);
 
 $table-text-align: left !default;
-
-// Width of the sidebar
-$sidebar-width: 300px !default;
 
 // Width of the content area
 $on-mobile:        700px !default;

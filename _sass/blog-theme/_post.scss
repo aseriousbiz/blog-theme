@@ -1,22 +1,31 @@
-h1.post-title {
+.post-title {
   font-size: 2em;
   line-height: 1em;
+  a {
+    color: $text-color !important;
+
+    &:hover {
+      color: darken($link-color, 20%) !important;
+    }
+  }
 }
 
 article.post {
   h1.post-title {
     font-size: 3em;
   }
+}
 
+.posts-list h1.post-title {
+  margin-top: 72px;
+}
+
+.post-content {
   img {
     display: block;
     max-width: 100%;
     margin: 0 auto;
   }
-}
-
-.posts-list h1.post-title {
-  margin-top: 72px;
 }
 
 .meta {
@@ -64,4 +73,22 @@ span.caption {
   font-size: .8em;
   text-align: center;
   display: block;
+}
+
+.read-more {
+  font-style: italic;
+
+  &::after {
+    content: "…"
+  }
+}
+
+@include media-query($on-mobile) {
+  .author img {
+     width: 80px !important;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+  }
 }
