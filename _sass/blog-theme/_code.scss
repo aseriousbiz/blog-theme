@@ -273,7 +273,6 @@ code {
   font-family: $code-font-family;
 
   &.highlighter-rouge {
-    @include relative-font-size(.85);
     background-color: $inline-code-background-color;
     border-radius: 3px;
     margin: 0;
@@ -301,5 +300,12 @@ pre.csharpcode {
 
   @media screen and (max-width: $on-mobile) {
     @include relative-font-size(.60);
+  }
+}
+
+@include media-query($on-mobile) {
+  code.highliter-rouge {
+    border: solid 1px blue;
+    font-size: $mobile-font-size !important;
   }
 }

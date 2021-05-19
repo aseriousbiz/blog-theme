@@ -129,6 +129,33 @@ span.caption {
   }
 
   .meta {
-    font-size: 0.8rem;
+    * {
+      font-size: 0.8rem;
+    }
+  }
+
+  .author {
+    margin-top: 40px;
+  }
+
+  article.post h1.post-title {
+    font-size: 2em;
+  }
+
+  .home .post-title {
+    margin: 0 auto 8px auto;
+    line-height: 0.8;
+
+    a {
+      font-size: 0.6em;
+    }
+  }
+  
+  .content h1 {
+    font-size: 1.2em;
+  }
+
+  .post-content {
+    margin-bottom: 32px;
   }
 }

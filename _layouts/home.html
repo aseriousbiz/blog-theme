@@ -3,29 +3,23 @@ layout: default
 ---
 <div class="home">
   <section class="hero is-main is-medium is-bold">
-    <div class="hero-body">
+    <div class="hero-body has-text-centered">
         <div class="container">
-          <div class="columns is-centered">
-            <div class="column is-narrow">
-              <figure class="image is-128x128">
-                <img src="https://ab.bot/img/abbot-full-wave.png" />
-              </figure>
+          {% if page.title %}
+          <h1 class="title">
+            <span>
+              {{ page.title }}
+              <img src="/assets/img/abbot-full-wave.png" class="big-abbot" />
+            </span>
+          </h1>
+          {% endif %}
+          {% if page.subtitle %}
+            <div class="subtitle">
+                <p>
+                  {{ page.subtitle }}
+                </p>
             </div>
-            <div class="column is-three-fifths">
-              {% if page.title %}
-              <h1 class="title">
-               {{ page.title }}
-              </h1>
-              {% endif %}
-              {% if page.subtitle %}
-                <div class="subtitle">
-                    <p>
-                      {{ page.subtitle }}
-                    </p>
-                </div>
-              {% endif %}  
-            </div>
-          </div>
+          {% endif %}  
         </div>
     </div>
   </section>
@@ -40,11 +34,11 @@ layout: default
             {% for post in paginator.posts %}
             {% unless post.redirect %}
             <header class="post-header">
-              <h1 class="post-title p-name" itemprop="name headline"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h1>
+              <h1 class="post-title" itemprop="name headline"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h1>
               {% include post/meta.html %}
             </header>
           
-            <div class="post-content e-content" itemprop="articleBody">
+            <div class="post-content" itemprop="articleBody">
               {% if site.show_excerpts %}
                 <div class="excerpt">
                   {% if post.excerpt_image %}

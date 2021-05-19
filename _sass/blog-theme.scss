@@ -14,8 +14,9 @@ $baseurl: '' !default;
 
 $base-font-size:   20px !default;
 $base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * .875 !default;
 $base-line-height: 1.5 !default;
+$small-font-size:  $base-font-size * .875 !default;
+$mobile-font-size: $small-font-size * .75 !default;
 
 $spacing-unit:     30px !default;
 
@@ -47,7 +48,10 @@ $inline-code-background-color: rgba(27,31,35,.05);
 $table-text-align: left !default;
 
 // Width of the content area
-$on-mobile:        700px !default;
+$on-mobile:         700px !default;
+$on-tablet:         768px !default;
+$on-desktop:        1024px !default;
+$on-widescreen:     1216px !default;
 
 @mixin media-query($device) {
   @media screen and (max-width: $device) {

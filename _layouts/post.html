@@ -9,11 +9,11 @@ layout: default
           {% include post/author.html %}
 
           <header class="post-header">
-            <h1 class="post-title p-name has-text-centered" itemprop="name headline">{{ page.title | escape }}</h1>
+            <h1 class="post-title has-text-centered" itemprop="name headline">{{ page.title | escape }}</h1>
             {% include post/meta.html %}
           </header>
 
-          <div class="post-content e-content" itemprop="articleBody">
+          <div class="post-content" itemprop="articleBody">
             {{ content }}
           </div>
           <span class="edit">Found a typo or mistake in the post? {% include post/edit.html %}</span>

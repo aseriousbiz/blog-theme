@@ -1,4 +1,4 @@
-{% assign author = page.author | default: post.author %}
+{% assign author = post.author | default: page.author %}
 {% if author %}
 <div class="author">
   <div class="avatar">
