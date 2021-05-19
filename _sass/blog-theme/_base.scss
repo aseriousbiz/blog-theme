@@ -69,6 +69,16 @@ ul.is-horizontal {
   }
 }
 
+.is-main {
+  background: $main-hero-background;
+  h1.title {
+    color: #fff !important; 
+  }
+  .subtitle {
+    color: #ddd !important;
+  }
+}
+
 @include media-query($on-mobile) {
   body {
     box-sizing: border-box;
