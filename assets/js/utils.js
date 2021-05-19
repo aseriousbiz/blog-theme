@@ -45,11 +45,8 @@ Haack.ready(function() {
   // generate it for every single page.
   // Set current page on navigation
   const path = window.location.pathname;
-  if (path === '/') {
-    return;
-  }
   const currentPageLink = document.querySelector('a.navbar-item[href="' + path + '"]');
-  if (currentPageLink) {
+  if (path !== '/' && currentPageLink) {
     currentPageLink.classList.add('is-active');
   }
 

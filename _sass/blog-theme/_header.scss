@@ -1,10 +1,6 @@
 .navbar {
   background-color: $navbar-background-color;
 
-  .navbar-menu {
-    background-color: lighten($navbar-background-color, 5%);
-  }
-
   a.navbar-item {
     color: $navbar-item-color;
     font-size: 1rem;
@@ -44,10 +40,11 @@
 
 @include media-query($on-desktop) {
   .navbar-menu {
-      padding: 0;
+    padding: 0; 
+    background-color: lighten($navbar-background-color, 5%);
 
-      .navbar-item {
-        padding: 1rem .75rem
-      }
+    .navbar-item {
+      padding: 1rem .75rem
+    }
   }
 }
