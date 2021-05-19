@@ -37,20 +37,32 @@ var Haack = (function() {
   };
 })()
 
-// This sets the `current-page` css class on the nav link
-// that points to the current page so we can render it differently
-// We do this in JS so that we can cache the header once rather than
-// generate it for every single page.
+
 Haack.ready(function() {
+  // This sets the `current-page` css class on the nav link
+  // that points to the current page so we can render it differently
+  // We do this in JS so that we can cache the header once rather than
+  // generate it for every single page.
   // Set current page on navigation
-  const path = window.location.pathname
-  const currentPageLink = document.querySelector('.site-nav li a[href="' + path + '"]')
+  const path = window.location.pathname;
+  if (path === '/') {
+    return;
+  }
+  const currentPageLink = document.querySelector('a.navbar-item[href="' + path + '"]');
   if (currentPageLink) {
-    const listItem = currentPageLink.parentElement
-    listItem.classList.add('current-page')
-    const span = document.createElement('span')
-    span.innerText = currentPageLink.textContent
-    listItem.appendChild(span)
-    listItem.removeChild(currentPageLink)
-}
+    currentPageLink.classList.add('is-active');
+  }
+
+  // This makes the "navbar-burger" wark
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
 })

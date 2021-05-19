@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <head>
   <meta charset="utf-8">
@@ -7,6 +7,7 @@
   <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
   {% if site.twitter_username %}{% include twitter_card.html %}{% endif %}
   {% seo %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% feed_meta %}
   {% if jekyll.environment == 'production' and site.google_analytics %}
@@ -15,4 +16,5 @@
   <script src="{{ '/assets/js/utils.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/slash.js' | relative_url }}" async></script>
   <script src="https://kit.fontawesome.com/97884e1c9f.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&amp;display=swap" rel="stylesheet">
 </head>

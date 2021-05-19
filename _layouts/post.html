@@ -1,19 +1,26 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<section class="section">
+  <div class="columns">
+    <div class="column is-three-fifths is-offset-one-fifth">
+      <div class="content">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+          {% include post/author.html %}
 
-  {% include post/author.html %}
+          <header class="post-header">
+            <h1 class="post-title p-name has-text-centered" itemprop="name headline">{{ page.title | escape }}</h1>
+            {% include post/meta.html %}
+          </header>
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    {% include post/meta.html %}
-  </header>
+          <div class="post-content e-content" itemprop="articleBody">
+            {{ content }}
+          </div>
+          <span class="edit">Found a typo or mistake in the post? {% include post/edit.html %}</span>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+          <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+        </article>
+      </div>
+    </div>
   </div>
-  <span class="edit">Found a typo or mistake in the post? {% include post/edit.html %}</span>
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+</section>

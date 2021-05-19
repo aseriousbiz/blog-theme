@@ -1,42 +1,70 @@
 ---
 layout: default
 ---
-
 <div class="home">
-  {% if page.title %}
-    <h1 class="title">{{ page.title }}</h1>
-  {% endif %}
-  {% if page.subtitle %}
-    <h2 class="subtitle">{{ page.subtitle }}</h2>
-  {% endif %}
+  <section class="hero is-link is-medium is-bold">
+    <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-narrow">
+              <figure class="image is-128x128">
+                <img src="/assets/img/abbot-logo.png" class="is-rounded" />
+              </figure>
+            </div>
+            <div class="column is-three-fifths">
+              {% if page.title %}
+              <h1 class="title">
+               {{ page.title }}
+              </h1>
+              {% endif %}
+              {% if page.subtitle %}
+                <div class="subtitle">
+                    <p>
+                      {{ page.subtitle }}
+                    </p>
+                </div>
+              {% endif %}  
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
 
   {{ content }}
-
+  
   {% if site.posts.size > 0 %}
-    <div class="posts-list">
-      {% for post in paginator.posts %}
-      {% unless post.redirect %}
-      <header class="post-header">
-        <h1 class="post-title p-name" itemprop="name headline"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h1>
-        {% include post/meta.html %}
-      </header>
-    
-      <div class="post-content e-content" itemprop="articleBody">
-        {% if site.show_excerpts %}
-          <div class="excerpt">
-            {% if post.excerpt_image %}
-            <img src="{{ post.excerpt_image }}" class="excerpt" />
-            {% endif %}
-            {{ post.excerpt }}
-            <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
+    <section class="section">
+      <div class="container posts-list">
+        <div class="columns">
+          <div class="column is-three-fifths is-offset-one-fifth content">
+            {% for post in paginator.posts %}
+            {% unless post.redirect %}
+            <header class="post-header">
+              <h1 class="post-title p-name" itemprop="name headline"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h1>
+              {% include post/meta.html %}
+            </header>
+          
+            <div class="post-content e-content" itemprop="articleBody">
+              {% if site.show_excerpts %}
+                <div class="excerpt">
+                  {% if post.excerpt_image %}
+                  <img src="{{ post.excerpt_image }}" class="excerpt" />
+                  {% endif %}
+                  {{ post.excerpt }}
+                  <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
+                </div>
+              {% else %}
+                {{ post.content }}
+              {% endif %}
+            </div>
+            {% endunless %}
+            {% endfor %}
           </div>
-        {% else %}
-          {{ post.content }}
-        {% endif %}
+        </div>
       </div>
-      {% endunless %}
-      {% endfor %}
-    </div>
-    {% include pagination.html %}
+    </section>
+    <section classe="section">
+      {% include pagination.html %}
+    </section>
   {% endif %}
 </div>

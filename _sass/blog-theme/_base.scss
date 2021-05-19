@@ -1,10 +1,10 @@
 body {
-  width: 800px;
-  padding: 40px 0;
-  margin: 0 auto;
   font-family: $base-font-family;
   background-color: $background-color;
   color: $text-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -27,17 +27,6 @@ a {
   }
 }
 
-h1, h2 {
-  text-align: center;
-  clear: both;
-  margin-bottom: 1em;
-}
-
-p, li, h1, h2 {
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-}
-
 blockquote {
   font-size: 23.625px;
   border-left: 4px solid $blockquote-border-color;
@@ -45,6 +34,18 @@ blockquote {
   font-style: italic;
   letter-spacing: -1px;
   padding-left: 15px;
+}
+
+ul.is-horizontal {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+
+  li
+  {
+      list-style-type: none;
+      display: inline;
+  }
 }
 
 .iframe-container {
@@ -62,36 +63,9 @@ blockquote {
   }
 }
 
-// --------
-// Tables
-// --------
-table {
-  border: 1px solid $grey-color-light;
-  border-collapse: collapse;
-  color: lighten($text-color, 18%);
-  margin-bottom: $spacing-unit;
-  text-align: $table-text-align;
-  width: 100%;
-
-  tr {
-    &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
-    }
-  }
-
-  th,
-  td {
-    padding: ($spacing-unit / 3) ($spacing-unit / 2);
-  }
-
-  th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
-  }
-
-  td {
-    border: 1px solid $grey-color-light;
+.tags {
+  .tag {
+    display: none;
   }
 }
 

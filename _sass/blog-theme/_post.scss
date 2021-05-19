@@ -1,5 +1,4 @@
 .post-title {
-  font-size: 2em;
   line-height: 1em;
   a {
     color: $text-color !important;
@@ -10,13 +9,17 @@
   }
 }
 
+.home .post-title {
+  font-size: 2.5em;
+}
+
 article.post {
-  h1.post-title {
+  .post-title {
     font-size: 3em;
   }
 }
 
-.posts-list h1.post-title {
+.posts-list .post-title {
   margin-top: 72px;
 }
 
@@ -25,6 +28,39 @@ article.post {
     display: block;
     max-width: 100%;
     margin: 0 auto;
+  }
+
+  // --------
+  // Tables
+  // --------
+  table {
+    border: 1px solid $grey-color-light;
+    border-collapse: collapse;
+    color: lighten($text-color, 18%);
+    margin-bottom: $spacing-unit;
+    text-align: $table-text-align;
+    width: 100%;
+
+    tr {
+      &:nth-child(even) {
+        background-color: lighten($grey-color-light, 6%);
+      }
+    }
+
+    th,
+    td {
+      padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    }
+
+    th {
+      background-color: lighten($grey-color-light, 3%);
+      border: 1px solid darken($grey-color-light, 4%);
+      border-bottom-color: darken($grey-color-light, 12%);
+    }
+
+    td {
+      border: 1px solid $grey-color-light;
+    }
   }
 }
 
@@ -38,13 +74,17 @@ article.post {
     color: $muted-text-color;
   }
 
-  .date, .tags, .comments, edit {
+  .date, .tags, .comments, .edit {
     padding-right: 10px;
+  }
+
+  * {
+    display: inline;
   }
 }
 
 img.excerpt {
-  margin-top: 8px;
+  margin: 8px 0;
 }
 
 .author {
