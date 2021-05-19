@@ -1,8 +1,9 @@
 .contributor-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
-  list-style-type: none;
-  margin-top: 20px;
+  list-style-type: none !important;
+  margin-top: 40px;
+  padding-top: 20px;
 
   li {
     @include relative-font-size(.8);
