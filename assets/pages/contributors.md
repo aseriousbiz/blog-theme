@@ -14,7 +14,7 @@ These lovely people have contributed a fix to this blog. If you want to see your
 
 Every post has a "suggest edit" link that lets you edit the blog post directly in the browser and automatically sends a pull request to GitHub.
 
-Or <a href="https://github.com/{{site.repository}}">Visit the blog repository</a> and send me a pull
+Or <a href="https://github.com/{{site.repository}}">Visit the blog repository</a> and send us a pull
 request the old fashioned way.
 
 {% if site.github.contributors.size > 0 %}
