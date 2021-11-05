@@ -16,9 +16,9 @@ layout: content
           <div class="post-content" itemprop="articleBody">
             {{ content }}
           </div>
-          <p>
+          <div class="post-footer">
             <span class="edit">Found a typo or mistake in the post? {% include post/edit.html %}</span>
-          </p>
+          </div>
           <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
         </article>
       </div>
