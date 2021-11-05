@@ -24,6 +24,8 @@ article.post {
 }
 
 .post-content {
+  margin-top: 1em;
+
   img {
     display: block;
     max-width: 100%;
@@ -61,6 +63,12 @@ article.post {
     td {
       border: 1px solid $grey-color-light;
     }
+  }
+}
+
+.home {
+  .post-content {
+    margin-top: 0;
   }
 }
 
