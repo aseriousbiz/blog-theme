@@ -7,6 +7,7 @@ author:
 excerpt_image:
   url: https://user-images.githubusercontent.com/19977/107439587-26731d00-6ae7-11eb-925c-0f50f09f2969.png
   title: "The title of the excerpt image"
+  alt: "Image of Abbot waving with a dark background"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
