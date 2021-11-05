@@ -1,0 +1,12 @@
+{% assign excerpt_image = post.excerpt_image %}
+{% if excerpt_image %}
+    {% if excerpt_image.url %}
+        {% if excerpt_image.title %}
+            <img src="{{ excerpt_image.url }}" class="excerpt" title="{{ excerpt_image.title %}}" />
+        {% else %}
+            <img src="{{ excerpt_image.url }}" class="excerpt" />
+        {% endif %}
+    {% else %}
+        <img src="{{ excerpt_image }}" class="excerpt" />
+    {% endif %}
+{% endif %}

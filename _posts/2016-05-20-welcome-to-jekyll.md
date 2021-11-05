@@ -4,7 +4,9 @@ tags: [sample, intro]
 author:
   avatar: https://2.gravatar.com/avatar/cdf546b601bf29a7eb4ca777544d11cd?s=160
   name: haacked
-excerpt_image: https://user-images.githubusercontent.com/19977/107439587-26731d00-6ae7-11eb-925c-0f50f09f2969.png
+excerpt_image:
+  url: https://user-images.githubusercontent.com/19977/107439587-26731d00-6ae7-11eb-925c-0f50f09f2969.png
+  title: "The title of the excerpt image"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

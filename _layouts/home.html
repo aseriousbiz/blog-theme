@@ -47,9 +47,7 @@ layout: default
                 <div class="post-content" itemprop="articleBody">
                   {% if site.show_excerpts %}
                     <div class="excerpt">
-                      {% if post.excerpt_image %}
-                      <img src="{{ post.excerpt_image }}" class="excerpt" />
-                      {% endif %}
+                      {% include post/excerpt_image.html %}
                       {{ post.excerpt }}
                       <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
                     </div>
